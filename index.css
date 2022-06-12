@@ -63,7 +63,7 @@ body{
 @media(max-width:767px){
 	body{
 		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
-		background-size: auto 334px, 135px;
+		background-size: 100%, 135px;
 		background-position: center 319px, 110% 3067px;
 	}
 }
@@ -140,6 +140,17 @@ h2{
 	padding: 26px 17px;
 	text-decoration: none;
 	color: #FFF;
+}
+@media(max-width:767px){
+	.scrollToTop{
+		left: 82%;
+		width: 50px;
+		height: 50px;
+		font-size: 14px;
+	}
+	.scrollToTop a{
+		padding: 18px 10px;
+	}
 }
 /* navbar */
 .navbar{
@@ -298,6 +309,9 @@ h2{
 	.role h3{
 		font-size: 18px;
 		margin-bottom: 32px;
+	}
+	.role h4{
+		margin-bottom: 16px;
 	}
 	.roleList{
 		justify-content: center;
@@ -530,5 +544,4 @@ h2{
 	padding: 16px 0;
 	background: #F5F5F5;
 	text-align: center;
-	font-size: 16px;
 }
