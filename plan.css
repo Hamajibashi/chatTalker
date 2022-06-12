@@ -184,12 +184,22 @@ h2{
 .subscribeNum{
     margin: 0 8px;
 }
+.currentBtn{
+	color: #fff;
+	background: #56C4C5;
+}
 .planDetail{
     display: flex;
 }
 @media(max-width:767px){
-	
+	.subscribe{
+		flex-wrap: wrap;
+	}
+	.subscribeNum .btn{
+		padding: 8px 16px;
+	}
 }
+/* faqs */
 /* footer */
 .footer{
 	padding: 16px 0;
