@@ -1,0 +1,534 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------------------------- */
+/* 通用項目 */
+*,*::before,*::after{
+	box-sizing:border-box;
+}
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #221E1F;
+	line-height: 1.5;
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: top right, 110% 1694px;
+	background-size: 851px 768px, 310px;
+}
+@media(max-width:767px){
+	body{
+		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
+		background-size: auto 334px, 135px;
+		background-position: center 319px, 110% 3067px;
+	}
+}
+.btn{
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+	background: #56C4C5;
+	text-align: center;
+	font-size: 18px;
+	padding: 12px 32px;
+	border-radius:27px;
+	width: 136px;
+}
+.btn:hover{
+	background: #2b9899;
+}
+h2{
+	font-size: 32px;
+	font-weight: bold;
+}
+.container{
+	max-width: 1088px;
+	margin: 0 auto;
+}
+@media(max-width:767px){
+	.container{
+		padding: 0 20px;
+	}
+}
+/* 球球 */
+.ball1{
+	position: absolute;
+	z-index: -1;
+	height: 360px;
+	left: -222px;
+	top: 589px;
+}
+.ball3{
+	position: absolute;
+	z-index: -1;
+	height: 150px;
+	left: 50px;
+	top: 2640px;
+}
+@media(max-width:767px){
+	.ball1{
+		top: 743px;
+		left:-77px;
+		height: 126px;
+	}
+	.ball3{
+		top: 4827px;
+		left: -76px;
+		height: 153px;
+	}
+}
+/* scroll to top */
+.scrollToTop{
+	position: fixed;
+	top: 87%;
+	left: 90%;
+	z-index: 99;
+	width: 71px;
+	height: 71px;
+	font-size: 18px;
+	font-family: 'Wendy One', sans-serif;
+	color: #fff;
+	background: #56C4C5;
+	border-radius:50px;
+}
+.scrollToTop a{
+	display: block;
+	padding: 26px 17px;
+	text-decoration: none;
+	color: #FFF;
+}
+/* navbar */
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 0;
+}
+.navbar img{
+	height: 40px;
+}
+.navbar .btn{
+	background: #FF5D50;
+	border-radius:22px;
+	font-size: 16px;
+	padding: 8px 32px;
+}
+.navbar .btn:hover{
+	background: #db3123;
+}
+@media(max-width:767px){
+	.navbar{
+		padding: 16px 20px;
+		border-bottom: 2px solid #FFD153;
+		margin-bottom: 32px;
+	}
+	.navbar img{
+		height: 24px;
+	}
+}
+/* banner */
+.banner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 217px;
+}
+.banner img{
+	max-width: 532px;
+	max-height: 534px;
+}
+.banner h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: #56C4C5;
+}
+.banner h3{
+	font-size: 48px;
+	font-weight: bold;
+}
+.banner p{
+	font-size: 20px;
+}
+@media(max-width:767px){
+	.banner{
+		flex-direction: column;
+		margin-bottom: 98.5px;
+	}
+	.banner h2{
+		font-size: 16px;
+	}
+	.banner h3{
+		font-size: 32px;
+	}
+	.banner p{
+		font-size: 16px;
+	}
+}
+/* sns */
+.sns h2{
+	text-align: center;
+	margin-bottom: 48px;
+}
+.snsList{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-bottom: 100px;
+}
+.snsItem img{
+	width: 90px;
+	height: 90px;
+	margin-bottom: 24px;
+}
+.snsItem h3{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 24px;
+}
+.snsItem p{
+	color: #747474;
+}
+@media(max-width:767px){
+	.sns h2{
+		font-size: 28px;
+		margin-bottom: 32px;
+	}
+	.snsList{
+		flex-wrap: wrap;
+		margin-bottom: 36px;
+	}
+	.snsItem img{
+		width: 60px;
+		height: 60px;
+		margin-bottom: 16px;
+	}
+	.snsItem h3{
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+	.snsItem p{
+		margin-bottom: 24px;
+	}
+}
+/* role */
+.role{
+	text-align: center;
+}
+.role h2{
+	margin-bottom: 16px;
+}
+.role h3{
+	font-size: 20px;
+	margin-bottom: 48px;
+}
+.roleList{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+.roleCard{
+	border-radius: 12px;
+	box-shadow: 0px 2px 10px #00000014;
+	background: #fff;
+	overflow: hidden;
+}
+.roleCard img{
+	width: 260px;
+	height: 260px;
+	margin-bottom: 16px;
+}
+.roleCard h4{
+	font-weight: bold;
+	color: #56C4C5;
+	margin-bottom: 16px;
+}
+.roleCard p{
+	margin-bottom: 24px;
+}
+@media(max-width:767px){
+	.role h2{
+		font-size: 28px;
+		margin-bottom: 16px;
+	}
+	.role h3{
+		font-size: 18px;
+		margin-bottom: 32px;
+	}
+	.roleList{
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 36px;
+	}
+	.roleCard{
+		margin-bottom: 24px;
+	}
+}
+/* feature */
+.feature{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+/* 右側文字 */
+.featureText{
+	width: 50%;
+	padding-left: 137px;
+}
+.featureText h2{
+	margin-bottom: 16px;
+}
+.featureText p{
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+/* 左側方塊 */
+.featureCard{
+	width: 230px;
+	height: 280px;
+	padding: 32px;
+	margin: 4px 13.5px;
+	border-radius: 12px;
+	box-shadow: 0px 2px 10px #00000014;
+}
+.featureList{
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.featureCard .img-bg{
+	width: 86px;
+	height: 86px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0px 2px 10px #00000014;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.featureCard h3{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+.featureCard p{
+	margin-bottom: 12px;
+}
+@media(max-width:767px){
+	.feature{
+		flex-direction: column-reverse;
+		margin-bottom: 36px;
+	}
+	.featureText{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 32px;
+		padding-left: 0;
+	}
+	.featureText h2{
+		font-size: 28px;
+		text-align: center;
+		margin-bottom: 16px;
+	}
+	.featureText p{
+		text-align: center;
+		margin-bottom: 16px;
+	}
+	.featureList{
+		width: 100%;
+		justify-content: center;
+		gap: 0px;
+	}
+	.featureCard{
+		padding: 32px 24px;
+		margin-bottom: 24px;
+	}
+	.featureCard h3{
+		margin-bottom: 20px;
+	}
+}
+/* feedback */
+.feedback{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+}
+.feedback h2{
+	margin-bottom: 104px;
+}
+.feedbackCard{
+	position: relative;
+	margin: 0 8px;
+	padding: 48px 32px 24px 32px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0px 2px 10px #00000014;
+}
+.feedbackList{
+	display: flex;
+	padding: 0 -8px;
+	margin-bottom: 24px;
+}
+.feedbackCard .user{
+	position: absolute;
+	top: -56px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	box-shadow: 0px 2px 10px #00000014;
+}
+.feedbackCard .comment{
+	padding-bottom: 24px;
+	margin-bottom: 24px;
+	border-bottom:1px solid #DDDDDD;
+}
+.feedbackCard h3{
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.feedbackCard .name-rate{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.feedbackCard .rate{
+	display: flex;
+}
+.feedbackCard .rate img{
+	width: 100%;
+	height: 16px;
+	margin-left: 8px;
+}
+.dots{
+	display: flex;
+}
+.dots .gray{
+	width: 10px;
+	height: 10px;
+	background: #DDDDDD;
+	border-radius: 50px;
+	margin-right: 8px;
+}
+.dots .yellow{
+	width: 16px;
+	height: 10px;
+	background: #FFD153;
+	border-radius: 50px;
+	margin-right: 8px;
+}
+@media(max-width:767px){
+	.feedback{
+		margin-bottom: 60px;
+	}
+	.feedback h2{
+		font-size: 28px;
+		margin-bottom: 88px;
+	}
+	.feedbackCard{
+		padding: 48px 16px 16px 16px;
+		margin: 0 0 80px 0;
+	}
+	.feedbackList{
+		flex-direction: column;
+		margin-bottom: -56px;
+	}
+	.feedbackCard .comment{
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+	}
+	.feedbackCard .rate{
+		padding-right: 16px;
+	}
+	.hide{
+		display: none;
+	}
+}
+/* footer */
+.footer-plan{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 503px;
+}
+.footer-plan .container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 260px;
+}
+.footer-plan h2{
+	margin-bottom: 48px;
+}
+@media(max-width:767px){
+	.footer-plan{
+		background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: contain;
+		height: 461px;
+	}
+	.footer-plan h2{
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+	.footer-plan .container{
+		padding-top: 293px;
+	}
+}
+.footer{
+	padding: 16px 0;
+	background: #F5F5F5;
+	text-align: center;
+	font-size: 16px;
+}
