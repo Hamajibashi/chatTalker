@@ -400,11 +400,14 @@ h2{
 	border-radius: 12px;
 	margin-bottom: 16px;
 	padding: 16px 32px;
+	cursor: pointer;
 }
 .q-item .title{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	text-decoration: none;
+	
 }
 .q-item .open{
 	font-weight: bold;

@@ -104,32 +104,37 @@
             <ul class="qList">
                 <li class="q-item">
                     <div class="title">
-                        <p>我要怎麼變更方案？</p>
-                        <a href="#">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_plus.svg"
-                                alt="展開按鈕">
-                        </a>
+                        <h4>我要怎麼變更方案？</h4>
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_plus.svg"
+                            alt="展開按鈕" class="openIcon">
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_minus.svg"
+                            alt="收合按鈕" class="closeIcon" style="display:none;">
                     </div>
+                    <p class="answer" style="display:none;">
+                        當然哦！我們錢都收了，不會拋棄你的<br>請您直接來我們公司，我們假日也都在辦公室。
+                    </p>
                 </li>
                 <li class="q-item">
                     <div class="title">
-                        <p>如果我沒有LINE官方帳號怎麼辦？</p>
-                        <a href="#">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_plus.svg"
-                                alt="展開按鈕">
-                        </a>
+                        <h4>如果我沒有LINE官方帳號怎麼辦？</h4>
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_plus.svg"
+                            alt="展開按鈕" class="openIcon">
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_minus.svg"
+                            alt="收合按鈕" class="closeIcon" style="display:none;">
                     </div>
+                    <p class="answer" style="display:none;">
+                        當然哦！我們錢都收了，不會拋棄你的<br>請您直接來我們公司，我們假日也都在辦公室。
+                    </p>
                 </li>
                 <li class="q-item">
-                    <div class="title open">
-                        <p>非上班日有客服支援嗎？</p>
-                        <a href="#">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_minus.svg"
-                                alt="收合按鈕">
-                        </a>
-
+                    <div class="title">
+                        <h4>非上班日有客服支援嗎？</h4>
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_plus.svg"
+                            alt="展開按鈕" class="openIcon">
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_minus.svg"
+                            alt="收合按鈕" class="closeIcon" style="display:none;">
                     </div>
-                    <p class="answer">
+                    <p class="answer" style="display:none;">
                         當然哦！我們錢都收了，不會拋棄你的<br>請您直接來我們公司，我們假日也都在辦公室。
                     </p>
                 </li>
@@ -141,6 +146,21 @@
             <p>© 2022 chatTalker. All Rights Reserved.</p>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.title').click(function (e) {
+                e.preventDefault();
+                $(this).toggleClass('open');
+                $(this).find('img').toggle(); 
+                $(this).parent().find('p').slideToggle();
+            });
+
+            $('.scrollToTop').click(function(){
+                $('html').animate({ scrollTop: "0" });
+            })
+        })
+    </script>
 </body>
 
 </html>
